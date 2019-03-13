@@ -27,6 +27,7 @@ export class Video extends React.Component {
         }
 
         render() {
+            const { navigate } = this.props.navigation;
             return(
                 <View>
                     { this.state.listLoaded && (
@@ -35,6 +36,7 @@ export class Video extends React.Component {
                                 data={ this.state.videoList }
                                 renderItem={({item}) => 
                                     <TubeItem 
+                                        navigate= {navigate}
                                         id={item.id.videoId}
                                         title={item.snippet.title}
                                         imageSrc={item.snippet.thumbnails.high.url}
@@ -58,7 +60,7 @@ export class Video extends React.Component {
 export class TubeItem extends React.Component {
 
     onPress = () => {
-        console.log(this.props.id);
+        this.props.navigate('VideoDetailRT', {ytubeId: this.props.id} );
     };
 
     render() {
