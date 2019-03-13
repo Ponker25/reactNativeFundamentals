@@ -1,6 +1,8 @@
 import React from 'react';
 import { Text, View, FlatList, Image, TouchableWithoutFeedback } from 'react-native';
 
+let apiKey = "AIzaSyAhMFEiNJiKnKhL7QDxxn3V6Q94F72C2Uc";
+
 export class Video extends React.Component {
     
     static navigationOptions = {
@@ -13,7 +15,7 @@ export class Video extends React.Component {
     }
 
     componentDidMount(){
-        return fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=pluralsight&type=video&key=AIzaSyAhMFEiNJiKnKhL7QDxxn3V6Q94F72C2Uc')
+        return fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=pluralsight&type=video&key=' + apiKey)
             .then((response) => response.json())
             .then((responseJson) => {
                 this.setState({
