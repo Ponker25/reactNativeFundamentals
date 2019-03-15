@@ -75,31 +75,32 @@ const styles = StyleSheet.create({
         paddingBottom: '45%'
     },
     heading: {
-        fontSize: 16,
-        flex: 1
+        fontSize: 26,
+        fontWeight: 'bold',
+        flex: 1.5
     },
     inputs: {
-        flex: 1,
-        width: '90%',
-        paddingTop: 10,
+        width: '80%',
+        borderBottomColor: 'black',
         borderBottomWidth: 2,
-        borderColor: 'black' 
+        paddingTop: '3%',
     },
     multiInput: {
         flex: 2.5,
-        width: '90%',
+        width: '80%',
         paddingTop: 20,
         borderBottomWidth: 2,
         borderColor: 'black'
     },
     buttons: {
+        backgroundColor: 'blue',
+        color: 'white',
+        textAlign: 'center',
         marginTop: 15,
         fontSize: 16,
-        borderWidth: 2,
-        borderColor: 'red',
-        padding: 5,
+        borderColor: 'blue',
+        borderWidth: 4,
         borderRadius: 5,
-        backgroundColor: 'red',
-
-    }
+        padding: 2.5
+    },
 });

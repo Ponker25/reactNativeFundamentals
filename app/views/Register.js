@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableHighlight, Alert, AsyncStorage } from 'react-native';
+import { Header } from '../Sections/Header.js';
 
 export class Register extends React.Component {
 
@@ -45,27 +46,32 @@ export class Register extends React.Component {
     }
 
     render() {
+        const { navigate } = this.props.navigation;
         return (
            <View style={styles.container}>
+                <Header navigate={navigate} message='Press to Login' />
                 <Text style={styles.heading}>Register Account</Text>
 
                 <TextInput 
                     style={styles.inputs}
+                    placeholder={'Enter a Username'}
                     onChangeText={(text) => this.setState({username: text})}
                     value={this.state.username}
                 />
-                <Text style={styles.labels}>Enter Username</Text>
+                <Text style={styles.labels}>Enter a Username</Text>
 
                 <TextInput 
                     style={styles.inputs}
+                    placeholder={'Enter Password'}
                     onChangeText={(text) => this.setState({passwrd: text})}
                     value={this.state.passwrd}
                     secureTextEntry={true}
                 />
-                <Text style={styles.labels}>Enter Password</Text>
+                <Text style={styles.labels}>Enter a Password</Text>
 
                 <TextInput 
                     style={styles.inputs}
+                    placeholder={'Confirm Password'}
                     onChangeText={(text) => this.setState({passwrdConfirm: text})}
                     value={this.state.passwrdConfirm}
                     secureTextEntry={true}
@@ -89,10 +95,9 @@ export class Register extends React.Component {
 
 const styles = StyleSheet.create ({
     container: {
-        flex: 1,
+        flex: 3,
         alignItems: 'center',
         paddingBottom: '45%',
-        paddingTop: '10%'
     },
     heading: {
         fontWeight: 'bold',
@@ -102,24 +107,26 @@ const styles = StyleSheet.create ({
     inputs: {
         width: '80%',
         backgroundColor: 'rgba(0, 0, 0,.111)',
-        borderRadius: 10,
+        borderRadius: 5,
         borderBottomColor: 'black',
         borderBottomWidth: 2,
         paddingTop: '5%',
         paddingLeft: 15
     },
     buttons: {
-        backgroundColor: 'rgba(0, 0, 0,.111)',
+        backgroundColor: 'blue',
+        color: 'white',
         textAlign: 'center',
         marginTop: 15,
-        fontSize: 20,
-        borderColor: 'rgba(0, 0, 0,.111)',
+        fontSize: 16,
+        borderColor: 'blue',
         borderWidth: 4,
         borderRadius: 5,
+        padding: 2.5
     },
     labels: {
         paddingBottom: 10,
-        paddingTop: 10,
-        fontSize: 16
+        paddingTop: 5,
+        fontSize: 12
     }
 });

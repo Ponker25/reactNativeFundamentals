@@ -55,7 +55,8 @@ export class Header extends React.Component {
                 />
                 <Text
                     style={styles.headText} 
-                    onPress={this.toggleUser}>{display}</Text>
+                    onPress={this.toggleUser}>{display}
+                </Text>
             </View>
         );
     }
