@@ -3,6 +3,7 @@ import { Text, View, FlatList, Image, TouchableWithoutFeedback } from 'react-nat
 import youtubeAPI from '../keys.json';
 
 const apiKey = youtubeAPI.youtubeAPI;
+console.log('hello')
 
 export class Video extends React.Component {
     static navigationOptions = {
