@@ -1,10 +1,10 @@
 import React from 'react';
 import { Text, View, FlatList, Image, TouchableWithoutFeedback } from 'react-native';
+import youtubeAPI from '../keys.json';
 
-let apiKey = "AIzaSyAhMFEiNJiKnKhL7QDxxn3V6Q94F72C2Uc";
+const apiKey = youtubeAPI.youtubeAPI;
 
 export class Video extends React.Component {
-    
     static navigationOptions = {
         header: null
     };
