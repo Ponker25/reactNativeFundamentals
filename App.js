@@ -12,7 +12,8 @@ import { Login } from './app/views/Login';
 import { Quiz } from './app/views/Quiz.js';
 import { Finish } from './app/views/QuizFinish.js';
 import { Blog } from './app/views/Blog';
-import { BlogDetail } from './app/views/BlogDetail'
+import { BlogDetail } from './app/views/BlogDetail';
+import { About } from './app/views/About'
 
 const MyRoutes = createStackNavigator(
   {
@@ -45,6 +46,9 @@ const MyRoutes = createStackNavigator(
     },
     BlogDetailRT: {
       screen: BlogDetail
+    },
+    AboutRT: {
+      screen: About
     }
   },
   { initialRouteName: 'HomeRT' }
